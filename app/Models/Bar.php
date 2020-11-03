@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $name
  * @property string $location
  * @property-read Collection|Drink[] $drinks
+ * @property-read Collection|Stock[] $stocks
  */
 class Bar extends Model
 {
@@ -22,5 +23,10 @@ class Bar extends Model
     public function drinks()
     {
         return $this->hasManyThrough(Drink::class, Stock::class);
+    }
+
+    public function stocks()
+    {
+        return $this->hasMany(Stock::class);
     }
 }

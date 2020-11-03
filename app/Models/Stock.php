@@ -10,6 +10,9 @@ use Illuminate\Database\Eloquent\Model;
  * Class Stock
  * @package App\Models
  * @mixin Eloquent
+ * @property int $id
+ * @property int $bar_id
+ * @property int $drink_id
  * @property int $quantity
  * @property-read Bar $bar
  * @property-read Drink $drink
